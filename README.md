@@ -3,10 +3,30 @@ dotfiles
 
 My personal configuration
 
+Prepare
+--------
+
+* Homebrew
+
+```
+ $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+ $ brew doctor
+ $ brew update
+```
+
+* Zsh
+
+```
+ $ /brew install zsh
+ $ sodo vi /etc/shells (最終行に/usr/local/bin/zshを追加)
+ $ chsh -s /usr/local/bin/zsh
+```
+
+
 Install
 --------
 
-```bash
+```
  $ git clone git://github.com/mikikohei/dotfiles.git ~/dotfiles
 ```
 
@@ -14,7 +34,7 @@ Install
 Setup
 --------
 
-```bash
+```
  $ cd ~/dotfiles
  $ ./setup.sh
  $ brew bundle
@@ -23,7 +43,6 @@ This script create a symbolic link as following:
 
 * .vim          -> vimfiles
 * .vimrc        -> dotfiles/.vimrc
-* .screenrc     -> dotfiles/.screenrc
 * .tmux.conf    -> dotfiles/.tmux.conf
-* .bashrc       -> dotfiles/.bashrc
-* .bash_profile -> dotfiles/.bash_profile
+* .zshrc       -> dotfiles/.zhrc
+* .zprofile    -> dotfiles/.zprofile
