@@ -1,0 +1,22 @@
+# main viewの左端にコミットIDを表示する
+set main-view = id date author commit-title:graph=yes,refs=yes
+# デフォルト
+# set main-view = date author commit-title:graph=yes,refs=yes
+
+# color
+# date
+color date cyan default
+set main-view-date = custom
+set main-view-date-format = "%Y/%m/%d %H:%M"
+
+# graph-commit
+color graph-commit magenta default
+
+# author
+#color author red default
+
+# 削除
+bind generic <Ctrl-g> !?git branch -d %(branch)
+
+# マージdiffを表示する
+set diff-options = -m --first-parent
