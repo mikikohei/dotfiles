@@ -18,7 +18,7 @@ endif
 runtime macros/matchit.vim
 
 " dein.vimに関するディレクトリ
-let s:dein_dir = expand('~/.cache')
+let s:dein_dir = expand('~/.vim/dein')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 let s:rc_dir = expand('~/')
 
