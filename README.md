@@ -17,7 +17,7 @@ Prepare
 * Zsh
 
 ```
- $ /brew install zsh
+ $ brew install zsh
  $ sodo vi /etc/shells (最終行に/usr/local/bin/zshを追加)
  $ chsh -s /usr/local/bin/zsh
 ```
@@ -27,6 +27,7 @@ Install
 --------
 
 ```
+ $ brew install git
  $ git clone git://github.com/mikikohei/dotfiles.git ~/dotfiles
 ```
 
