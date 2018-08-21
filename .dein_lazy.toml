@@ -119,3 +119,4 @@ on_ft = ['toml']
 # YAMLのシンタックスハイライト
 repo = 'chase/vim-ansible-yaml'
 on_ft = ['yaml']
+

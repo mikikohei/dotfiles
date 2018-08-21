@@ -248,3 +248,4 @@ hook_add = ''' " {{{
     " Space+ffでカレントバッファのディレクトリを開く
     noremap <silent> [unite]ff :<C-u>VimFilerBufferDir<CR>
 ''' # }}}
+
