@@ -18,7 +18,7 @@ Prepare
 
 ```
  $ brew install zsh
- $ sodo vi /etc/shells (最終行に/usr/local/bin/zshを追加)
+ $ sudo vi /etc/shells (最終行に/usr/local/bin/zshを追加)
  $ chsh -s /usr/local/bin/zsh
 ```
 
