@@ -41,8 +41,10 @@ Setup
 ```
 This script create a symbolic link as following:
 
-* .vim          -> vimfiles
-* .vimrc        -> dotfiles/.vimrc
-* .tmux.conf    -> dotfiles/.tmux.conf
+* .vim         -> vimfiles
+* .vimrc       -> dotfiles/.vimrc
 * .zshrc       -> dotfiles/.zhrc
 * .zprofile    -> dotfiles/.zprofile
+* .tigrc       -> dotfiles/.tigrc
+* .dein.toml       -> dotfiles/.dein.toml
+* .dein_lazy.toml  -> dotfiles/.dein_lazy.toml
