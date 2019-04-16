@@ -2,7 +2,7 @@
 
 VIMRC=~/.vimrc
 ZSHRC=~/.zshrc
-#ZSH_PROFILE=~/.zprofile
+ZSH_PROFILE=~/.zprofile
 DEIN_TOML=~/.dein.toml
 DEIN_LAZY_TOML=~/.dein_lazy.toml
 TIGRC=~/.tigrc
@@ -22,18 +22,18 @@ backup()
   elif [ -f $TARGET -o -d $TARGET ]; then
 
     # backup
-    mv $TARGET $TARGET.$BACKUP.bk
- 
+    mv $TARGET $TARGET.$BACKUP
+
   else
     # Target is not exist.
-    echo
+    echo $TARGET 'is not exist.'
   fi
 }
 
 #=====================================
 # main
 
-# set backup list 
+# set backup list
 CHECK_TARGET="$VIMRC $ZSHRC $DEIN_TOML $DEIN_LAZY_TOML $TIGRC"
 
 # backup
@@ -45,7 +45,7 @@ done
 # cretae symbolic link
 ln -s $PWD/.vimrc $VIMRC
 ln -s $PWD/.zshrc $ZSHRC
-#ln -s $PWD/.zprofile $ZPROFILE
+ln -s $PWD/.zprofile $ZPROFILE
 ln -s $PWD/.dein.toml $DEIN_TOML
 ln -s $PWD/.dein_lazy.toml $DEIN_LAZY_TOML
 ln -s $PWD/.tigrc $TIGRC
