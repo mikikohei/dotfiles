@@ -136,6 +136,8 @@ nnoremap <silent> gx :<C-u>tabclose<CR>
 nnoremap <silent> go :<C-u>tabonly<CR>
 " w!!で保存にroot権限が必要なファイルを保存する
 cmap w!! w !sudo tee % > /dev/null
+" jjをESCにキーバインド
+inoremap <silent> jj <ESC>
 
 "+----------------+
 "| Color settings |
