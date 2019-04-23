@@ -148,7 +148,7 @@ highlight Folded ctermfg=130 ctermbg=0
 set t_Co=256
 
 " colorscheme
-" colorscheme wombat256
+colorscheme molokai
 
 "+----------------+
 "| Other settings |
