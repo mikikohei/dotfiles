@@ -41,7 +41,7 @@ on_ft = ['markdown']
 hook_source = ''' " {{{
     " 自動で折りたたまないようにする
     let g:vim_markdown_folding_disabled = 1
-''' # }}}
+''' " }}}
 
 [[plugins]]
 # Markdownのプレビュー
@@ -51,7 +51,7 @@ on_ft = ['markdown']
 hook_source = ''' " {{{
     " リアルタイムプレビューを有効化
     let g:previm_enable_realtime = 1
-''' # }}}
+''' " }}}
 
 [[plugins]]
 # Scalaのシンタックスハイライト
@@ -86,7 +86,7 @@ hook_source = ''' " {{{
         autocmd!
         autocmd BufWritePre *.go GoFmt
     augroup END
-''' # }}}
+''' " }}}
 
 [[plugins]]
 # Rustのシンタックスハイライト
