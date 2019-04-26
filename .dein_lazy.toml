@@ -38,20 +38,20 @@ on_ft = ['slim']
 # Markdownのシンタックスハイライト
 repo = 'rcmdnk/vim-markdown'
 on_ft = ['markdown']
-hook_source = ''' " {{{
+hook_source = '''
     " 自動で折りたたまないようにする
     let g:vim_markdown_folding_disabled = 1
-''' " }}}
+'''
 
 [[plugins]]
 # Markdownのプレビュー
 repo = 'kannokanno/previm'
 depends = ['open-browser.vim']
 on_ft = ['markdown']
-hook_source = ''' " {{{
+hook_source = '''
     " リアルタイムプレビューを有効化
     let g:previm_enable_realtime = 1
-''' " }}}
+'''
 
 [[plugins]]
 # Scalaのシンタックスハイライト
@@ -80,13 +80,13 @@ on_ft = ['haskell']
 # Go言語の統合サポート
 repo = 'fatih/vim-go'
 on_ft = ['go']
-hook_source = ''' " {{{
+hook_source = '''
     " GoFmtコマンドを保存時に走らせる
     augroup GoFmtVimGoCommands
         autocmd!
         autocmd BufWritePre *.go GoFmt
     augroup END
-''' " }}}
+'''
 
 [[plugins]]
 # Rustのシンタックスハイライト
