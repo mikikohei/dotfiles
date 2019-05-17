@@ -38,20 +38,14 @@ on_ft = ['slim']
 # Markdownのシンタックスハイライト
 repo = 'rcmdnk/vim-markdown'
 on_ft = ['markdown']
-hook_source = '''
-    " 自動で折りたたまないようにする
-    let g:vim_markdown_folding_disabled = 1
-'''
+hook_source = 'let g:vim_markdown_folding_disabled = 1'
 
 [[plugins]]
 # Markdownのプレビュー
 repo = 'kannokanno/previm'
 depends = ['open-browser.vim']
 on_ft = ['markdown']
-hook_source = '''
-    " リアルタイムプレビューを有効化
-    let g:previm_enable_realtime = 1
-'''
+hook_source = 'let g:previm_enable_realtime = 1'
 
 [[plugins]]
 # Scalaのシンタックスハイライト
