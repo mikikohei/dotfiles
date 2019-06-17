@@ -61,7 +61,7 @@ RPROMPT=$RPROMPT"%F{white} %D{%H:%M:%S}%f"
 
 # TAB保管 
 TRAPALRM() {
-    if [ "$WIDGET" != "expand-or-complete" ]; then
+    if [ "$WIDGET" != "expand-or-complete" ] && [ "$WIDGET" != "peco-history-selection" ]; then
         zle reset-prompt
     fi
 }
@@ -124,3 +124,12 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 bindkey '^r' history-incremental-pattern-search-backward
 bindkey '^s' history-incremental-pattern-search-forward
 
+# peco
+function peco-history-selection() {
+    BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
+    CURSOR=$#BUFFER
+    zle reset-prompt
+}
+
+zle -N peco-history-selection
+bindkey '^R' peco-history-selection
