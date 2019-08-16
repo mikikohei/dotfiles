@@ -2,7 +2,7 @@
 
 VIMRC=~/.vimrc
 ZSHRC=~/.zshrc
-ZSH_PROFILE=~/.zprofile
+ZPROFILE=~/.zprofile
 DEIN_TOML=~/.dein.toml
 DEIN_LAZY_TOML=~/.dein_lazy.toml
 TIGRC=~/.tigrc
