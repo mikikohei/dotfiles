@@ -103,6 +103,8 @@ alias mkdir='mkdir -p'
 alias ..='c ../'
 alias back='pushd'
 alias diff='diff -U1'
+# assume-role
+alias assume-role='function(){eval $(command assume-role $@);}'
 
 # backspace,deleteキーを使えるように
 #stty erase ^H
