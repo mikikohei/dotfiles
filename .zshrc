@@ -59,9 +59,9 @@ TRAPALRM() {zle reset-prompt}
 #RPROMPT=$RPROMPT"%F{white} %D{%Y-%m-%d %H:%M:%S} %f"
 RPROMPT=$RPROMPT"%F{white} %D{%H:%M:%S}%f"
 
-# TAB保管 
+# TAB保管
 TRAPALRM() {
-    if [ "$WIDGET" != "expand-or-complete" ] && [ "$WIDGET" != "peco-history-selection" ]; then
+    if [ "$WIDGET" != "expand-or-complete" ] && [ "$WIDGET" != "peco-history-selection" ] && [ "$WIDGET" != "fzf-select-history" ]; then
         zle reset-prompt
     fi
 }
@@ -135,3 +135,14 @@ function peco-history-selection() {
 
 zle -N peco-history-selection
 bindkey '^R' peco-history-selection
+
+#function fzf-select-history() {
+#    BUFFER=`history -n -r 1 | fzf --no-sort +m`
+#    CURSOR=$#BUFFER
+#    zle reset-prompt
+#}
+#zle -N fzf-select-history
+#bindkey '^R' fzf-select-history
+
+# fzf
+export FZF_DEFAULT_OPTS='--color=fg+:11 --height 70% --reverse --select-1 --exit-0 --multi'
