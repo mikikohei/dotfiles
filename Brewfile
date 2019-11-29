@@ -2,29 +2,31 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
 tap "weaveworks/tap"
+tap "remind101/formulae"
 
 # base
 brew "jq"
-brew "neovim"
 brew "wget"
 brew "tree"
 brew "zsh"
 brew "cloc"
+brew "fzf"
 brew "openssl"
 cask "alfred"
 cask "iterm2"
 
 # aws
-brew "aws-elasticbeanstalk"
 brew "awscli"
+brew "remind101/formulae/assume-role"
 
 # terraform
 brew "tfenv"
-brew "terraform_landscape"
 
 # docker, k8s
+brew "dockerize"
+brew "kubectx"
 brew "kubernetes-helm"
-brew "kubectl"
+brew "kubernetes-cli"
 brew "weaveworks/tap/eksctl"
 cask "docker"
 cask "minikube"
@@ -33,14 +35,10 @@ cask "minikube"
 brew "ccat"
 brew "colordiff"
 brew "exa"
-brew "htop"
 
 # git
 brew "git"
 brew "tig"
-
-# history
-brew "peco"
 
 # browser
 cask "google-chrome"
@@ -50,6 +48,7 @@ cask "slack"
 
 # ime
 cask "google-japanese-ime"
+cask "visual-studio-code"
 
 # ide
 cask "android-studio"
@@ -61,8 +60,3 @@ brew "carthage"
 
 # node
 brew 'nodebrew'
-
-# tools
-cask 'dropbox'
-cask 'evernote'
-cask 'virtualbox'
