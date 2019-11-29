@@ -22,14 +22,12 @@ Prepare
  $ chsh -s /usr/local/bin/zsh
 ```
 
-
 Install
 --------
 
 ```
  $ git clone git://github.com/mikikohei/dotfiles.git ~/dotfiles
 ```
-
 
 Setup
 --------
@@ -39,12 +37,17 @@ Setup
  $ ./setup.sh
  $ brew bundle
 ```
+
 This script create a symbolic link as following:
 
-* .vim         -> vimfiles
-* .vimrc       -> dotfiles/.vimrc
-* .zshrc       -> dotfiles/.zhrc
-* .zprofile    -> dotfiles/.zprofile
-* .tigrc       -> dotfiles/.tigrc
-* .dein.toml       -> dotfiles/.dein.toml
-* .dein_lazy.toml  -> dotfiles/.dein_lazy.toml
+* .zlogin -> ~/.zprezto/runcoms/zlogin
+* .zlogout -> ~/.zprezto/runcoms/zlogout
+* .zpreztorc -> ~/.zprezto/runcoms/zpreztorc
+* .zprofile -> ~/.zprezto/runcoms/zprofile
+* .zshenv -> ~/.zprezto/runcoms/zshenv
+* .zshrc -> ~/.zprezto/runcoms/zshrc
+* .vimrc -> ~/dotfiles/.vimrc
+* .dein.toml -> ~/dotfiles/.dein.toml
+* .dein_lazy.toml -> ~/dotfiles/.dein_lazy.toml
+* .gitconfig -> ~/dotfiles/.gitconfig
+* .gitignore_global -> ~/dotfiles/.gitignore_global
