@@ -2,7 +2,8 @@
 	name = mikik
 	email = mikik@nttdata.co.jp
 [alias]
-  st = status --short --branch
+  st = status
+	sts = status --short --branch
   co = checkout
   fe = fetch
   br = branch
