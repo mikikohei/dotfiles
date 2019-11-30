@@ -1,6 +1,6 @@
 # alias
 alias ls='exa'
-alias ll='exa -1'
+alias ll='exa -l'
 alias la='exa -aghHl'
 alias tree='exa -T'
 alias cat='ccat'
