@@ -1,51 +1,44 @@
-#!/bin/sh
+#!/bin/bash
 
-VIMRC=~/.vimrc
-ZSHRC=~/.zshrc
-ZPROFILE=~/.zprofile
-DEIN_TOML=~/.dein.toml
-DEIN_LAZY_TOML=~/.dein_lazy.toml
-TIGRC=~/.tigrc
+# backup
+BACKUP_FILES=(.zshrc .gitconfig .gitignore_global .vimrc)
 
-#=====================================
-# backup function
-backup()
-{
-  local TARGET=$1
-  local BACKUP=`date +%Y%m%d%H%M%S`
-
-  if [ -L $TARGET ]; then
+for file in ${BACKUP_FILES[@]}
+do
+  if [ -L $HOME/$file ]; then
 
     #if symbolic link, remove.
-    rm -f $TARGET
+    rm -f $HOME/$file
 
-  elif [ -f $TARGET -o -d $TARGET ]; then
+  elif [ -f $HOME/$file -o -d $HOME/$file ]; then
 
     # backup
-    mv $TARGET $TARGET.$BACKUP
+    mv $HOME/$file $HOME/$file.`date +%Y%m%d%H%M%S`
 
   else
     # Target is not exist.
-    echo $TARGET 'is not exist.'
+    echo $HOME/$file 'is not exist.'
   fi
-}
-
-#=====================================
-# main
-
-# set backup list
-CHECK_TARGET="$VIMRC $ZSHRC $DEIN_TOML $DEIN_LAZY_TOML $TIGRC"
-
-# backup
-for target in ${CHECK_TARGET[@]}
-do
-  backup $target
 done
 
+# setup prezto
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
+
+# override .zpreztorc
+mv ~/dotfiles/.zpreztorc ~/.zpreztorc
+
+# update rc
+echo "[ -f ~/dotfiles/.zshrc ] && source ~/dotfiles/.zshrc" >> ~/.zshrc
+
 # cretae symbolic link
-ln -s $PWD/.vimrc $VIMRC
-ln -s $PWD/.zshrc $ZSHRC
-ln -s $PWD/.zprofile $ZPROFILE
-ln -s $PWD/.dein.toml $DEIN_TOML
-ln -s $PWD/.dein_lazy.toml $DEIN_LAZY_TOML
-ln -s $PWD/.tigrc $TIGRC
+DOT_FILES=(.gitconfig .gitignore_global .vimrc .dein.toml .dein_lazy.toml)
+
+for file in ${DOT_FILES[@]}
+do
+    ln -s $HOME/dotfiles/$file $HOME/$file
+done
