@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # backup
 BACKUP_FILES=(.zshrc .gitconfig .gitignore_global .vimrc)
