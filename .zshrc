@@ -59,6 +59,9 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 # android
 export PATH=$HOME/Library/Android/sdk/platform-tools:$PATH
 
+# editor
+export EDITOR='vim'
+
 # option
 setopt hist_ignore_dups
 setopt hist_reduce_blanks
