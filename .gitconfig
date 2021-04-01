@@ -1,6 +1,6 @@
 [user]
   name = mikik
-  email = mikik@nttdata.co.jp
+  email = kohei.miki@nttdata.com
 [alias]
   st = status
   sts = status --short --branch
@@ -35,3 +35,5 @@
   prompt = false
 [fetch]
   prune = true
+[pull]
+  rebase = false
